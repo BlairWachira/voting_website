@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>code_identification</title>
+    <link rel="stylesheet" href="{% static 'vote_app/entry.css' %}" />
+  </head>
+  <body>
+    <div>
+      <label>enter your voter code below</label>
+      <form method="POST">
+        {% csrf_token %}
+        <input
+          type="password"
+          placeholder="type your code"
+          name="code_input"
+          autocomplete="off"
+        />
+        <button type="submit" class="no_button">submit</button>
+      </form>
+    </div>
+  </body>
+</html>

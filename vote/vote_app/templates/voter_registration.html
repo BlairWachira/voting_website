@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>voteing_website</title>
+    <link rel="stylesheet" href="{% static 'vote_app/vote_reg.css' %}" />
+  </head>
+  <body>
+    <div>
+      <label>input your details below</label>
+      <form method="POST">
+        {% csrf_token %}
+        <input
+          class="name_input"
+          type="text"
+          placeholder="voter first name"
+          name="firstname"
+          required
+          autocomplete="off"
+        />
+        <input
+          class="last_input"
+          type="text"
+          placeholder="voter last name"
+          name="lastname"
+          required
+          autocomplete="off"
+        />
+        <input
+          class="id_input"
+          type="text"
+          placeholder="voter identification number"
+          name="idname"
+          required
+          autocomplete="off"
+        />
+        <button class="submit_button" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

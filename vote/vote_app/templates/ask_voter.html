@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>voting_website</title>
+    <link rel="stylesheet" href="{% static 'vote_app/ask_voter.css' %}" />
+  </head>
+  <body>
+    <div>
+      <label>ARE YOU A REGISTERED VOTER</lable>
+      <form method="POST" action="{% url 'identity' %}">
+        {% csrf_token %}
+        <button type="submit" class="yes_button">YES</button>
+      </form>
+      <form method="POST" action="{% url 'regestration' %}">
+        {% csrf_token %}
+        <button type="submit" class="no_button">NO</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codes</title>
+    <link rel="stylesheet" href="{% static 'vote_app/codes.css' %}" />
+  </head>
+  <body>
+    <div>
+      <label>your registration was succesfull</label>
+      <label>here is your voter code</label>
+      <h2>{{ voter_code }}</h2>
+      <form method="POST" action="{% url 'choose' %}">
+        {% csrf_token %}
+        <button type="submit" class="OK">YES</button>
+      </form>
+    </div>
+  </body>
+</html>

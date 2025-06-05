@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Voting Website</title>
+    <link rel="stylesheet" href="{% static 'vote_app/dashboard.css' %}" />
+  </head>
+  <body>
+    <h1>AVAILABLE CANDIDATES</h1>
+    <p>Vote only one</p>
+
+    <div>
+      {% for cardidate in cardidates %}
+      <div class="candidate-container">
+        <img
+          class="candidate-image"
+          src="{{ cardidate.cardidate_image.url }}"
+          alt="{{ cardidate.cardidate_name }}"
+        />
+
+        <div class="candidate-details">
+          <h2 class="candidate-name">{{ cardidate.cardidate_name }}</h2>
+          <h3 class="candidate-party">
+            Party: {{ cardidate.cardidate_party }}
+          </h3>
+        </div>
+
+        <form
+          method="post"
+          action="{% url 'cast_vote' cardidate.id %}"
+          class="vote-form"
+        >
+          {% csrf_token %}
+          <button type="submit">VOTE</button>
+        </form>
+      </div>
+      {% empty %}
+      <p>No candidates found.</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>

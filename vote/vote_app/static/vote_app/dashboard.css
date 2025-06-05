@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #444;
+}
+
+.candidate-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 40px;
+}
+
+.candidate-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+.candidate-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.candidate-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.candidate-party {
+  margin: 8px 0 0 0;
+  font-size: 15px;
+  font-style: italic;
+  color: #777;
+}
+
+.vote-form {
+  margin-left: auto;
+}
+
+.vote-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vote-form button:hover {
+  background-color: #218838;
+}
+
