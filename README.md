@@ -10,6 +10,9 @@ now the user can vote
 ![image](https://github.com/user-attachments/assets/ece6af42-1345-41cd-b528-3a0bc5ba59cd)
 once finished his code is deleted and browser cache is deleted to prevent going back to vote
 ![image](https://github.com/user-attachments/assets/28ca37d0-1c8d-4ff5-be5a-8e6906a79761)
+here is the admin site where he can enter cardidate an chech votes
+![image](https://github.com/user-attachments/assets/4a55f22d-8a4f-4161-8adf-511a90cce6e6)
+
 
 
 
